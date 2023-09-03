@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quotable-mongo-deployment
+  labels:
+    app: quotable-mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quotable-mongo
+  template:
+    metadata:
+      labels:
+        app: quotable-mongo
+    spec:
+      containers:
+      - name: quotable-mongo
+        image: mtlucas/quotable-mongo:1.0.0
+        ports:
+        - containerPort: 27017
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quotable-mongo-ip
+spec:
+  ports:
+  - port: 27017
+    protocol: TCP
+    targetPort: 27017
+  selector:
+    app: quotable-mongo
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10800
+  type: LoadBalancer

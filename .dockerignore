@@ -1,0 +1,9 @@
+# Quotables ignore list
+.circleci/
+.git/
+.github/
+.vscode/
+__tests__/
+mongodb/
+node_modules/
+npm-debug.log
