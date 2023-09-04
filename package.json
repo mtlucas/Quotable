@@ -47,15 +47,6 @@
     "shortid": "^2.2.15"
   },
   "devDependencies": {
-<<<<<<< HEAD
-    "@types/jest": "^26.0.13",
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^10.1.0",
-    "babel-preset-latest-node": "^5.5.1",
-    "eslint": "^7.8.1",
-    "eslint-config-airbnb-base": "^14.1.0",
-    "eslint-config-prettier": "^6.10.1",
-=======
     "@babel/core": "^7.18.5",
     "@babel/plugin-transform-modules-commonjs": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
@@ -64,7 +55,6 @@
     "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
->>>>>>> 641c45131f0761c8c710e21be54b7ac243454a7f
     "eslint-plugin-import": "^2.20.1",
     "husky": "^8.0.1",
     "jest": "^28.1.1",
